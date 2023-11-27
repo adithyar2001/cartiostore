@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estore/css/carttotal.css">
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="container-fluid py-2">
+                <div class="row ">
+                    <!-- <div class="col-lg-6">
+                        <p>LOGO</p>
+                    </div> -->
+                    <div class="col-lg-12 d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-column justify-content-center">
+                            <div class="d-flex flex-row justify-content-center gap-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <img src="/estore/images/bag.png" alt="" height="20px">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div class="mt-3">
+                                        <p class="fw-bolder" style="color: orange;">C<span class="text-dark">A</span>RTI<span class="text-dark">O</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-nav" id="mytopnav">
+                            <a href="/estore/page1.html" class="active-1 nav-link text-dark ">HOME</a>
+                            <a href="/estore/allproducts.html" class="nav-link text-dark">SHOP</a>
+                            <a href="/estore/allproducts.html" target="_blank" class="nav-link text-dark">SALES</a>
+                            <a href="/estore/aboutus.html" class="nav-link text-dark">ABOUT US</a>
+                            <a href="/estore/contact.html" class="nav-link text-dark">CONTACT</a>
+                            <a href="#" class="active-1 nav-link text-dark"><i class="fa fa-search"></i></a>
+                            <a href="/estore/carttotal.html" class="active-1 nav-link text-dark s-topcart"><i
+                                    class="fa fa-shopping-bag"><span class="count">0</span></i></a>
+                            <a href="javascript:void(0);" class="icon nav-link text-dark" onclick="navfunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Loading">
+                        <div class="Loading-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <div class="searchbar-div" style="display: none;">
+                <div class="d-flex flex-row justify-content-center gap-2 py-3">
+                    <div>
+                        <input type="text" id="searchtext" placeholder="Searchproducts">
+                    </div>
+                    <div class="searchbar-btn">
+                        <a href="#"><i class="fa fa-search text-dark fw-bolder"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-6">
+                    <div class="table-responsive p-3 bg-light rounded">
+                        <table class="table table-borderless table-hover border-bottom" id="carttable">
+                            <thead>
+                                <tr class="border-bottom">
+                                    <th></th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                
+                                </tr>
+                                <tr class="border-bottom cart_item">
+                                    <td>
+                                        <button onclick="deleteRow(this)">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted">Waarn shoes</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <span class="text-muted">$<span class=" text-muted actual_price">200</span>.00</span>
+                                        
+                                    </td>
+                                    <td class="d-flex justify-content-center">
+                                        <div class="qty-btn">
+                                            <input type="button" value="-" class="decreaseqty" field="qty" >
+                                            <input type="text" value="1" class="qty">
+                                            <input type="button" value="+" class="increaseqty" field="qty" >
+                                        </div>
+                                    <td class="carttotal">
+                                        <p class="item_price text-muted"></p>
+
+                                    </td>
+                                </tr>
+                                <tr class="border-bottom cart_item">
+                                    <td>
+                                        <button onclick="deleteRow(this)">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted">oneplus 11R</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <span class="text-muted">$<span class=" text-muted actual_price">700</span>.00</span>
+                                        
+                                    </td>
+                                    <td class="d-flex justify-content-center">
+                                        <div class="qty-btn">
+                                            <input type="button" value="-" class="decreaseqty" field="qty" >
+                                            <input type="text" value="1" class="qty">
+                                            <input type="button" value="+" class="increaseqty" field="qty" >
+                                        </div>
+                                    <td class="carttotal">
+                                        <p class="item_price text-muted"></p>
+                                    </td>
+                                </tr>
+                                <tr class="border-bottom cart_item">
+                                    <td>
+                                        <button onclick="deleteRow(this)">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <p class="text-muted">vile hoodie</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <span class="text-muted">$<span class=" text-muted actual_price">300</span>.00</span>
+                                        
+                                    </td>
+                                    <td class="d-flex justify-content-center">
+                                        <div class="qty-btn">
+                                            <input type="button" value="-" class="decreaseqty" field="qty" >
+                                            <input type="text" value="1" class="qty">
+                                            <input type="button" value="+" class="increaseqty" field="qty" >
+                                        </div>
+                                    <td class="carttotal">
+                                        <p class="item_price text-muted"></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex flex-row justify-content-end  py-3">
+                            <button class="btn btn-dark" field="qty" id="updatecart">Update Cart</button>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <form action="" id="applycouponform">
+                            <div class="bg-light rounded d-flex flex-row justify-content-around py-5">
+                                <div>
+                                    <input type="text" placeholder="Coupon Code" class="coupon-text">
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark" id="applycoupbtn">Apply Coupon</button>
+                                </div>
+                            </div>
+                            <p id="coupalert"></p>
+                        </form>
+                         
+                    </div>
+                </div>
+
+                <div class="col-lg-6 headline-text top1">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="cart-total">
+                            <div>
+                                <h2 class="text-start fw-bolder py-2">Cart Total</h2>
+                            </div>
+                            <div class="table-responsive" >
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <p class="text-muted fw-bold">SUBTOTAL</p>
+                                        </td>
+                                        <td>
+                                            <P class="text-muted fw-bold total_price"></P>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-muted fw-bold">TOTAL</p>
+                                        </td>
+                                        <td>
+                                            <P class="text-muted fw-bold total_price"></P>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="d-flex flex-row justify-content-end py-2">
+                                    <button class="btn btn-dark" onclick="window.open(href='/estore/checkout.html','_blank')">PROCEED TO CHECKOUT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+        <footer>
+            <div class="container-fluid p-3 bg-light py-5">
+                <div class="py-4">
+                    <h2 class="fw-bolder">Join Our Newsletter</h2>
+                </div>
+                <div id="thnx" class="p-2">
+
+                </div>
+                <div class="row">
+                    <form action="" id="newsform">
+                        <div class="row p-2">
+                            <div class="col pb-3">
+                                <input type="text" placeholder="YOUR EMAIL" id="newsletter-email">
+                            </div>
+                            <div class="col">
+                                <input type="button" class="btn btn-dark " id="subscribe" value="SUBSCRIBE">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex flex-row gap-1 p-1 py-3">
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-google text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-instagram text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-envelope text-dark"></i>
+                        </a>
+                    </div class="px-1">
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-between">
+                    <div>
+                        <a href="#" class="copyright">©2023 All Rights Reserved</a>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <a href="#" class="copyright">Help & Info</a>
+                        </div>
+                        <div>
+                            <a href="#" class="copyright"> Terms & Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/estore/sub/jquery.js"></script>
+    <!-- <script src="/estore/sub/newsletteranimate.js"></script> -->
+</body>
+
+</html>

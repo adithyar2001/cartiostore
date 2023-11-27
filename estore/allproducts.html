@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estore/css/allproducts.css">
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="container-fluid py-2">
+                <div class="row ">
+                    <!-- <div class="col-lg-6">
+                        <p>LOGO</p>
+                    </div> -->
+                    <div class="col-lg-12 d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-column justify-content-center">
+                            <div class="d-flex flex-row justify-content-center gap-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <img src="/estore/images/bag.png" alt="" height="20px">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div class="mt-3">
+                                        <p class="fw-bolder" style="color: orange;">C<span class="text-dark">A</span>RTI<span class="text-dark">O</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-nav" id="mytopnav">
+                            <a href="/estore/page1.html" class="active-1 nav-link text-dark ">HOME</a>
+                            <a href="/estore/allproducts.html"  class="nav-link text-dark">SHOP</a>
+                            <a href="/estore/allproducts.html" target="_blank" class="nav-link text-dark">SALES</a>
+                            <a href="/estore/aboutus.html" class="nav-link text-dark">ABOUT US</a>
+                            <a href="/estore/contact.html" class="nav-link text-dark">CONTACT</a>
+                            <a href="#" class="active-1 nav-link text-dark search"><i class="fa fa-search"></i></a>
+                            <a href="/estore/carttotal.html" class="active-1 nav-link text-dark s-topcart"><i class="fa fa-shopping-bag"><span class="count">0</span></i></a>
+                            <a href="javascript:void(0);" class="icon nav-link text-dark" onclick="navfunction()">
+                                    <i class="fa fa-bars"></i>
+                                  </a> 
+                    </div>
+                    </div>
+                    <div class="Loading">
+                        <div class="Loading-progress"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        <main>
+            <div class="searchbar-div" style="display: none;">
+                <div class="d-flex flex-row justify-content-center gap-2 py-3">
+                    <div>
+                        <input type="text" id="searchtext" placeholder="Searchproducts">
+                    </div>
+                    <div class="searchbar-btn">
+                        <a href="#"><i class="fa fa-search text-dark fw-bolder"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <div class="text-center">
+                    <p class="fw-bolder fs-1">All Products</p>
+                    <p class="text-muted">Enjoy shopping with hearts content</p>
+                </div>
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card ">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/1/8/t/-original-imagsz2yuh5hsv5b.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">iPhone 14</p>
+                                        <p class="text-muted fw-bold">$700.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/m/l/o/-original-imagmg6gzjf7gggt.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Samsung S23 Ultra</p>
+                                        <p class="text-muted fw-bold">$1100.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/e/0/g/-original-imagsuzyg4k27z5z.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Samsung Galaxy F14 5G</p>
+                                        <p class="text-muted fw-bold">$400.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/back-cover/d/y/a/viv-y16-ipky-01-kwine-case-original-imagutxgyfufr5eg.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Vivo T2X 5G</p>
+                                        <p class="text-muted fw-bold">$400.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card ">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/l/5/e/-original-imaghhfg8ckemkde.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Roadstar t-shirt</p>
+                                        <p class="text-muted fw-bold">$200.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/z/0/k/l-all-rbcpon-sky-one-nb-nicky-boy-original-imagrdhcgyk7papf.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">NB NICKY BOY</p>
+                                        <p class="text-muted fw-bold">$200.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/0/l/r/xl-seerat-suit-klosia-original-imagtfz2wrznhxwr.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Klosia</p>
+                                        <p class="text-muted fw-bold">$180.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/kj8wccw0-0/t-shirt/r/t/k/xl-12193406-roadster-original-imafyupqwwqgfrkh.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Roadstar women's t-shirt</p>
+                                        <p class="text-muted fw-bold">$200.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card ">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/u/l/v/6-rkt-1807-white-40-atom-white-original-imagzvjpzjxegsha.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">ATOM FROST</p>
+                                        <p class="text-muted fw-bold">$600.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/y/b/w/6-rkt-a71-black-orange-40-atom-black-original-imagrg5z9hzaahzf.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">ATOM SPRING</p>
+                                        <p class="text-muted fw-bold">$100.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/m/v/f/-original-imagkghdzgudguvd.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Firebolt S6</p>
+                                        <p class="text-muted fw-bold">$300.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex justify-content-center py-4 carousel-div">
+                                <div class="card product-card">
+                                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/i/6/z/-original-imagznsrxuseynhy.jpeg?q=70"
+                                        class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                    <div class="card-body">
+                                        <p class="fw-bold">Boat Rockerz 155</p>
+                                        <p class="text-muted fw-bold">$420.00</p>
+                                        <button class="btn btn-dark add-to-cart-btn">
+                                            <div class="add-to-cart-div">
+                                                <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                        cart</span></div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- socialposts -->
+
+            <div class=" p-4 pt-5">
+                <div class="text-center">
+                    <p class="fs-2 fw-bolder">Social Media Posts</p>
+                    <p class="text-muted" style="font-size: 12px;">Here's some of our popular trends and products share from our customers</p>
+                </div>
+                <div class="row py-3">
+                    <div class="col-md text-center">
+                        <img src="https://rukminim2.flixcart.com/image/832/832/ktep2fk0/shopsy-sari/f/a/j/free-shopspsy-blue-keri-03-cottan-silk-400-uk-worlds-unstitched-original-imag6rbuzzc68th5.jpeg?q=70" alt="" class="social-post">
+                    </div>
+                    <div class="col-md text-center">
+                        <img src="https://rukminim2.flixcart.com/image/1080/1080/l5ld8y80/fabric/1/c/v/no-na-unstitched-na-jequred-saree-anuvrata-original-imagg8f6xb9u3u8r.jpeg?q=70" alt="" class="social-post">
+                    </div>
+                    <div class="col-md text-center">
+                        <img src="data:image/jpeg;base64,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" alt="" class="social-post" width="204px">
+                    </div>
+                    <div class="col-md text-center">
+                        <img src="https://rukminim2.flixcart.com/image/821/821/l3os4280/sari/s/t/u/free-3077-abc-entprise-unstitched-original-imager4masawhfrp.jpeg?q=70" alt="" class="social-post">
+                    </div>
+                    <div class="col-md text-center">
+                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/sari/2/g/i/free-kp-3031-ericaa-textile-unstitched-original-imaggurhhcmav4eu.jpeg?q=70" alt="" class="social-post">
+                    </div>
+                </div>
+            </div>
+<!-- Customer reviews -->
+<div class="container-fluid">
+    <div class="row mt-4 pb-4 pt-2">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card text-center review-card ">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <div>
+                        <h2>Customer</h2>
+                        <h2>Review</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card review-card">
+                            <div class="card-body">
+                                <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                <p class="text-muted fw-bold">username</p>
+                                <p>jdvbdjbvj bdjvbjdvjdvbdjvb djb vjdvjdjdbvjdbjvbd jvbdj bvjdv jbdvbdnvdv jdvjdjv
+                                    bdjvbjd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+        </main>
+        <footer>
+            <div class="container-fluid p-3 bg-light py-5">
+                <div class="py-4">
+                    <h2 class="fw-bolder">Join Our Newsletter</h2>
+                </div>
+                <div id="thnx" class="p-2">
+
+                </div>
+                <div class="row">
+                    <form action="" id="newsform">
+                        <div class="row p-2">
+                            <div class="col pb-3">
+                                <input type="text" placeholder="YOUR EMAIL" id="newsletter-email">
+                            </div>
+                            <div class="col">
+                                <input type="button" class="btn btn-dark " id="subscribe" value="SUBSCRIBE">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex flex-row gap-1 p-1 py-3">
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-google text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-instagram text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-envelope text-dark"></i>
+                        </a>
+                    </div class="px-1">
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-between">
+                    <div>
+                        <a href="#" class="copyright">©2023 All Rights Reserved</a>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <a href="#" class="copyright">Help & Info</a>
+                        </div>
+                        <div>
+                            <a href="#" class="copyright"> Terms & Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="/estore/sub/newsletteranimate.js"></script> -->
+    <script src="/estore/sub/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

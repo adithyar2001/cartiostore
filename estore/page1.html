@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estore/css/page1.css">
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- navbar -->
+        <div class="row">
+            <!-- <div class="col-lg-6">
+                <div class="d-flex flex-row">
+                    <div>
+                        <img src="/estore/images/bag.png" alt="" height="20px">
+                    </div>
+                    <div>
+                        <p>tu carrito</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-lg-12 d-flex flex-row justify-content-between">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="d-flex flex-row justify-content-center gap-1">
+                        <div class="d-flex flex-column justify-content-center">
+                            <img src="/estore/images/bag.png" alt="" height="20px">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <div class="mt-3">
+                                <p class="fw-bolder" style="color: orange;">C<span class="text-dark">A</span>RTI<span class="text-dark">O</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="top-nav" id="mytopnav">
+                    <a href="/estore/page1.html" class="active-1 nav-link text-dark ">HOME</a>
+                    <a href="/estore/allproducts.html" class="nav-link text-dark">SHOP</a>
+                    <a href="/estore/allproducts.html" target="_blank" class="nav-link text-dark">SALES</a>
+                    <a href="/estore/aboutus.html" class="nav-link text-dark">ABOUT US</a>
+                    <a href="/estore/contact.html" class="nav-link text-dark">CONTACT</a>
+                    <a href="#" class="active-1 nav-link text-dark search"><i class="fa fa-search"></i></a>
+                    <a href="/estore/carttotal.html" class="active-1 nav-link text-dark s-topcart"><i
+                            class="fa fa-shopping-bag"></i><span class="count">0</span></a>
+                    <a href="javascript:void(0);" class="icon nav-link text-dark" onclick="navfunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="Loading">
+                <div class="Loading-progress"></div>
+            </div>
+        </div>
+        
+        <main>
+            <!-- searchbar -->
+            <div class="searchbar-div" style="display: none;">
+                <div class="d-flex flex-row justify-content-center gap-2 py-3">
+                    <div>
+                        <input type="text" id="searchtext" placeholder="Searchproducts">
+                    </div>
+                    <div class="searchbar-btn">
+                        <a href="#"><i class="fa fa-search text-dark fw-bolder"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- first banner -->
+            <div class="row">
+                <div class="col-lg-6 top-bimg top1">
+                    
+                    <!-- <img src="estore/images/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt=""> -->
+                </div>
+                <div class="col-lg-6 headline-text top1 " style=" background-image:url('https://cdn.dribbble.com/users/1100256/screenshots/7124464/media/94a5e074f80ae9466705cf4c833c3432.gif');
+                    background-repeat:repeat;">
+                    <div>
+                        <h2 class="fw-bold">LATEST</h2>
+                        <h2 class="fw-bold">TRENDS & FASHION</h2>
+                        <h3 class="fw-bold">WE HAVE IT ALL</h3>
+                        <h2></h2>
+                    </div>
+                    <div>
+                        <p class="text-muted" style="font-size: 12px;">Enjoy shopping with huge offers and<br>discounts
+                            on our fashion store</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-dark" type="submit"
+                            onclick="window.open(href='/estore/allproducts.html','_blank')">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product slideshow -->
+            <div class="container-fluid d-flex flex-column mt-2" style="position: relative;">
+                <div class="slideshow-container p-2 d-flex flex-column justify-content-center">
+                    <div class="slided fading ">
+                        <img class="banner-img" src="/estore/images/slideshowrealme11pro.png" alt="" height="400px">
+                    </div>
+                    <div class="slided fading">
+                        <img class="banner-img" src="/estore/images/slideshowimgflip.png" alt="" height="400px">
+                    </div>
+                    <div class="slided fading">
+                        <img class="banner-img" src="/estore/images/slideshowimgneo.png" alt="" height="400px">
+                    </div>
+                    <div class="slided fading">
+                        <img class="banner-img" src="/estore/images/slideshowimg115g.png" alt="" height="400px">
+                    </div>
+                </div>
+                <br>
+                <div style="text-align: center;" class="dotss">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- features -->
+            <div class="container-fluid bg-light mt-4 pb-2">
+                <div class="text-center fs-2 fw-bold p-4">
+                    <p>Why Shop With Us</p>
+                </div>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <div>
+                            <img src="/estore/images/100-percent.png" alt="" class="feature-img">
+                        </div>
+                        <div>
+                            <p class="fw-bold">Verified</p>
+                            <p class="text-muted feature-desc">100% Genuine and verified products</p>
+                        </div>
+                    </div>
+                    <div class="col-md text-center">
+                        <div>
+                            <img src="/estore/images/security.png" alt="" class="feature-img">
+                        </div>
+                        <div>
+                            <p class="fw-bold">Security</p>
+                            <p class="text-muted feature-desc">Ensures safety and customer privay</p>
+                        </div>
+                    </div>
+                    <div class="col-md text-center">
+                        <div>
+                            <img src="/estore/images/price-tag.png" alt="" class="feature-img">
+                        </div>
+                        <div>
+                            <p class="fw-bold">Discounts</p>
+                            <p class="text-muted feature-desc">Up to 70% discount on products</p>
+                        </div>
+                    </div>
+                    <div class="col-md text-center">
+                        <div>
+                            <img src="/estore/images/fast.png" alt="" class="feature-img">
+                        </div>
+                        <div>
+                            <p class="fw-bold">Fast Delivery</p>
+                            <p class="text-muted feature-desc">Fast door step delivary</p>
+                        </div>
+                    </div>
+                    <div class="col-md text-center">
+                        <div>
+                            <img src="/estore/images/order.png" alt="" class="feature-img">
+                        </div>
+                        <div>
+                            <p class="fw-bold">Refund</p>
+                            <p class="text-muted feature-desc">100% refunds and 5 day replacement policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hugesale -->
+            <div class="row pt-3">
+                <div class="col-md-4 d-flex flex-column justify-content-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="">
+                            <div class="card product-card" id="huge-offers-home">
+                                <div class="card-body d-flex flex-column justify-content-center p-5">
+                                    <h3 class="card-title">
+                                        <p class="fw-bold">HUGE OFFERS ! <br>SHOP FOR LATEST TRENDS</p>
+                                    </h3>
+                                    <p class="text-muted">Shop for the latest products <br>Happy Shopping</p>
+                                    <div>
+                                        <button class="btn btn-dark" type="submit"
+                                            onclick="window.open(href='/estore/allproducts.html','_blank')">Shop
+                                            Now</button>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="3000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card ">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/ksqeky80/shoe/g/m/7/7-805-green-7-waan-black-green-original-imag68r5hr3f2m3f.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Wild Fire HE-6</p>
+                                            <p class="text-muted fw-bold">$100.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/1/x/p/-original-imaggcax5eup3zqg.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Helio PS6</p>
+                                            <p class="text-muted fw-bold">$120.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/kzd147k0/t-shirt/q/z/m/m-tsrt-303-reya-original-imagbefyffzh68wj.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Joger's Tshirt</p>
+                                            <p class="text-muted fw-bold">$80.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card ">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/watch/k/h/p/-original-imagqrcgqgcbmd9e.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Sonata S-6</p>
+                                            <p class="text-muted fw-bold">$200.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2500">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-jacket/a/c/t/m-men-full-niky-jacket-white-wearsport-men-original-imag5v44gddzugsq.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Hemlock Jacket</p>
+                                            <p class="text-muted fw-bold">$300.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/km9ht3k0/shirt/6/f/g/42-12947232-roadster-original-imagf75xd9kfhejz.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Roadster shirt</p>
+                                            <p class="text-muted fw-bold">$180.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- products -->
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card ">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/j6l2hzk0/rack-shelf/t/a/q/dws101-decorasia-original-imaeww3myyb24z8m.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Decorasia Shelves</p>
+                                            <p class="text-muted fw-bold">$160.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sandal/d/i/i/8-bantu-black-grey-8-clymb-grey-original-imagh85nvbvs82v7.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">CLYMB EVA</p>
+                                            <p class="text-muted fw-bold">$200.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/e/0/g/-original-imagsuzyg4k27z5z.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Samsung Galaxy F14 5G</p>
+                                            <p class="text-muted fw-bold">$400.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card ">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/smartwatch/i/6/b/-original-imaghcn5m6bgpjmy.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Pebble Cosmos SW</p>
+                                            <p class="text-muted fw-bold">$210.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/bottle/n/h/8/1000-water-bottle-steel-bottle-steel-water-bottle-sipper-bottle-original-imagtcppymga3vjm.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">BOLDFIT 1000ml</p>
+                                            <p class="text-muted fw-bold">$70.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/mug/x/c/9/double-wall-vacuum-insulated-stainless-steel-tea-coffee-mug-original-imaggb4ffkv6dafq.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Nirvanna Mug</p>
+                                            <p class="text-muted fw-bold">$50.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card ">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/ktaeqvk0/speaker/mobile-tablet-speaker/t/t/x/rma2002-realme-original-imag6zdnpggd7fp8.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images img-home-1 product-singleproduct"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Realme Cobble</p>
+                                            <p class="text-muted fw-bold">$199.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/x/z/x/-original-imagq64bmstutqdx.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Penvis Pro</p>
+                                            <p class="text-muted fw-bold">$190.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center py-4 carousel-div">
+                                    <div class="card product-card">
+                                        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/smartwatch/z/o/h/-original-imagq328zn8ntcgc.jpeg?q=70"
+                                            class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                                        <div class="card-body">
+                                            <p class="fw-bold">Pebble Frost Pro</p>
+                                            <p class="text-muted fw-bold">$270.00</p>
+                                            <button class="btn btn-dark add-to-cart-btn">
+                                                <div class="add-to-cart-div">
+                                                    <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                            cart</span></div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="d-flex flex-column gap-3">
+                <div class="row scrolling-wrapper mt-4 pb-4 pt-2 ttt">
+                    <div class="col">
+                        <div class="card product-card" style="width: 280px;" id="huge-offers-home">
+                            <div class="card-body d-flex flex-column justify-content-center p-3">
+                                <h3 class="card-title">
+                                    <p class="fw-bold">HUGE OFFERS ! <br>SHOP FOR LATEST TRENDS</p>
+                                </h3>
+                                <p class="text-muted">Shop for the latest products <br>Happy Shopping</p>
+                                <div>
+                                    <button class="btn btn-dark" type="submit"
+                                        onclick="window.open(href='/estore/allproducts.html','_blank')">Shop
+                                        Now</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card product-card ">
+                            <img src="https://rukminim2.flixcart.com/image/832/832/ksqeky80/shoe/g/m/7/7-805-green-7-waan-black-green-original-imag68r5hr3f2m3f.jpeg?q=70"
+                                class="card-img-top p-1 home-product-images img-home-1 product-singleproduct" alt="...">
+                            <div class="card-body">
+                                <p class="fw-bold">Wild Fire HE-6</p>
+                                <p class="text-muted fw-bold">$100.00</p>
+                                <button class="btn btn-dark add-to-cart-btn">
+                                    <div class="add-to-cart-div">
+                                        <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                cart</span></div>
+                                    </div>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card product-card">
+                            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/b/r/g/s-cmb-po2-dab-wynk-smartees-original-imagm5vhumtz8epz.jpeg?q=70"
+                                class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                            <div class="card-body">
+                                <p class="fw-bold">Product title</p>
+                                <p class="text-muted fw-bold">$100.00</p>
+                                <button class="btn btn-dark add-to-cart-btn">
+                                    <div class="add-to-cart-div">
+                                        <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                cart</span></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col remove_on_shrink">
+                        <div class="card product-card">
+                            <img src="https://rukminim2.flixcart.com/image/612/612/kzd147k0/t-shirt/q/z/m/m-tsrt-303-reya-original-imagbefyffzh68wj.jpeg?q=70"
+                                class="card-img-top p-1 home-product-images product-singleproduct" alt="...">
+                            <div class="card-body">
+                                <p class="fw-bold">Product title</p>
+                                <p class="text-muted fw-bold">$100.00</p>
+                                <button class="btn btn-dark add-to-cart-btn">
+                                    <div class="add-to-cart-div">
+                                        <div><i class="fa fa-cart-plus"></i><span style="padding-left: 5px;">Add to
+                                                cart</span></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Customer reviews -->
+            <div class="container-fluid">
+                <div class="row mt-4 pb-4 pt-2">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card text-center review-card ">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <div>
+                                    <h2>Customer</h2>
+                                    <h2>Review</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Janet jacob</p>
+                                            <p>Loved their service, good quality products and there are huge discounts on all times on bunch of products</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Robin j</p>
+                                            <p>Wonderful job on giving affordable products at huge discounts.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/5 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Susan Fox</p>
+                                            <p>Very good service and A plus customer supports, they will help you without a fuss.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Thomas stan</p>
+                                            <p>Good services, good discounts and fast delivery.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Gorden rams</p>
+                                            <p>Bought some cookware they where promising.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card review-card">
+                                        <div class="card-body">
+                                            <img src="/estore/images/4 star rating.png" width="58vm" alt="...">
+                                            <p class="text-muted fw-bold">Henry b</p>
+                                            <p>Bought a smartwatch on sale, got the item in 3 days. They also checked for any defects.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div class="container-fluid p-3 bg-light py-5">
+                <div class="py-4">
+                    <h2 class="fw-bolder">Join Our Newsletter</h2>
+                </div>
+                <div id="thnx" class="p-2">
+
+                </div>
+                <div class="row">
+                    <form action="" id="newsform">
+                        <div class="row p-2">
+                            <div class="col pb-3">
+                                <input type="text" placeholder="YOUR EMAIL" id="newsletter-email">
+                            </div>
+                            <div class="col">
+                                <input type="button" class="btn btn-dark " id="subscribe" value="SUBSCRIBE">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex flex-row gap-1 p-1 py-3">
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-google text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-facebook text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-instagram text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-twitter text-dark"></i>
+                        </a>
+                    </div>
+                    <div class="px-1">
+                        <a href="#">
+                            <i class="fa fa-envelope text-dark"></i>
+                        </a>
+                    </div class="px-1">
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-between">
+                    <div>
+                        <a href="#" class="copyright">©2023 All Rights Reserved</a>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <a href="#" class="copyright">Help & Info</a>
+                        </div>
+                        <div>
+                            <a href="#" class="copyright"> Terms & Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slided");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+    <script src="/estore/sub/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="/estore/sub/newsletteranimate.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
